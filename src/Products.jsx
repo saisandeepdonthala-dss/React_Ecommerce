@@ -6,10 +6,10 @@ function Products() {
     const[search,setSearch]=useState('');
     const[products,setProducts]=useState([
       {id:1,productName:"AC",price:50000,p_img: "https://m.media-amazon.com/images/I/51Y4KT7l4TL._AC_UY327_FMwebp_QL65_.jpg "},
-      {id:2,productName:"Fridge",price:70000,p_img: "https://m.media-amazon.com/images/I/619ZkcJhq2L._AC_UY327_FMwebp_QL65_.jpg "},
+      {id:2,productName:"Fridge",price:70000,p_img: "https://m.media-amazon.com/images/I/71iB8o2vqlL._SX679_.jpg"},
       {id:3,productName:"Watch",price:5000,p_img:" https://m.media-amazon.com/images/I/51EA9wufAnL._AC_UL480_FMwebp_QL65_.jpg"},
-      {id:4,productName:"Laptop",price:100000,p_img:" https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/img25/nov/bau/ain/gw/Laptops_186_116_10._SY116_CB777673831_.jpg"},
-      {id:5,productName:"Washing Machine",price:40000,p_img:"https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg"},
+      {id:4,productName:"Laptop",price:100000,p_img:" https://m.media-amazon.com/images/I/61s8J1vGi0L._AC_UY327_FMwebp_QL65_.jpg"},
+      {id:5,productName:"Washing Machine",price:40000,p_img:"https://m.media-amazon.com/images/I/71BITpPSjML._AC_UY327_FMwebp_QL65_.jpg"},
   ])
   function addToCart(produce){
     setCart(previous=>[...previous,produce])
@@ -35,7 +35,7 @@ function Products() {
     <div key={v.id}>
       <li> {v.productName} </li>
       <li> {v.price}₹</li>
-      <img src={v.p_img} width="40%"/>
+      <img src={v.p_img} width="50%"/>
       <button onClick={()=>addToCart(v)}>Add To Cart </button>
     </div>
      ))
